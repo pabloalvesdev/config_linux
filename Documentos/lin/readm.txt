@@ -1,0 +1,107 @@
+-------------------------------------- ZSH TERMINAL -----------------------------------------------------------------------------------------
+1. sudo apt install zsh && sudo apt install curl. Depois digitar "zsh" e pressionar 2.
+2. Acessar a página: github.com/ohmyzsh/ohmyzsh
+3. Procurar pela instalação via CURL
+4. Acessar a página: github.com/zdharma/zinit
+5. Instalar via CURL e selecionar N quando pergutar sobre instalação de plugins
+6. Acessar a página: github.com/denysdovhan/spaceship-prompt
+7. Procurar pelo "oh-my-zsh" clonar o repositório e linkar (logo a baixo)
+8. TERMINAL: code ~/.zshrc
+9. Procurar por: ZSH_THEME e definir ZSH_THEME="spaceship"
+10. Descer até depois de "### End of Zinit's installer chunk" e escrever as seguintes linhas:
+    zinit light zsh-users/zsh-autosuggestions
+    zinit light zsh-users/zsh-completions
+    zinit light zdharma/fast-syntax-highlighting
+11. Depois escrever as seguintes linhas:
+
+##Theming
+LS_COLORS=$LS_COLORS:'ow=01;34:' ; export LS_COLORS
+ 
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+ 
+SPACESHIP_USER_SHOW="always" # Shows System user name before directory name
+ 
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+# SPACESHIP_PROMPT_SEPARATE_LINE=false # Make the prompt span across two lines
+# SPACESHIP_DIR_TRUNC=1 # Shows only the last directory folder name
+ 
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+
+# hide % on start
+unsetopt PROMPT_SP
+
+
+12. OBS: SE HOUVER ALGUM EXPORT DO .bashrc ELE DEVE ESTAR DENTRO DO CÓDIGO ACIMA
+13. Para fazer o ZSH ficar padrão: chsh -s $(which zsh)
+
+
+
+--------------------------------------- Instalar HYPER terminal -------------------------------------------------------------------------------------------
+1. Para abrir hyper com ctrl + alt + T: sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
+2. TERMINAL: hyper install hyper-custom-controls
+3. Instalar tema OMNI Hyper
+
+
+--------------------------------------- Tema --------------------------------------------------------------------------------------------------------------
+1. Criar pasta .themes
+2. Copiar pasta "pablo" dentro da pasta .themes
+3. TERMINAL: sudo apt install gnome-tweak-tool
+4. Selecionar tema "pablo"
+
+--------------------------------------- Icon -------------------------------------------------------------------------------------------------------------
+1. Criar pasta .icons
+2. Copiar pasta "pabloIcon" dentro da pasta .icons
+3. Selecionar icon theme pabloIcon
+
+----------------------------------------NodeJs-------------------------------------------------------------------------------------------------------------
+1. Baixar pacote binário direto do site do NodeJs
+2. Na pasta onde está o arquivo (geralemtne de Downloads). TERMINAL: sudo tar xf node-vX.Y.Z-linux-x64.tar.xz --directory /opt
+3. TERMINAL: code ~/.profile
+4. Adicionar as seguintes linhas no arquivo profile:
+
+  # NodeJS
+  export NODEJS_HOME=/opt/node-vX.Y.Z-linux-x64/bin
+  export PATH=$NODEJS_HOME:$PATH
+
+5. TERMINAL: code ~/.zshrc
+6. Adicionar as seguintes linhas no arquivo zshrc:
+
+  # NodeJS
+  export NODEJS_HOME=/opt/node-vx.y.z-linux-x64/bin
+  export PATH=$NODEJS_HOME:$PATH
+  
+  # Android Studio
+  export ANDROID_SDK_HOME="~/Android/Sdk"
+  alias emulator="$ANDROID_SDK_HOME/emulator/emulator"
+
+7. Terminou este processo, abrir o terminal e digitar: . ~/.profile ~/.bashrc
+8. Para testar se deu certo só digitar "node -v" no terminal.
+
+-----------------------PROGRAMAS--------------------------------
+KAZAM
+PITIVI
+REMMINA
+SPOTIFY
+DISCORD
+VSCODE
+CHROME
+HYPER
+NOTEJOT
+PLANK DOCK
+STELLARIUM
+VLC
+LANDSCAPE
+PICK COLORS
