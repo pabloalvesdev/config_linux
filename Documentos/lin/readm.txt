@@ -105,3 +105,5 @@ STELLARIUM
 VLC
 LANDSCAPE
 PICK COLORS
+NOTAS: https://github.com/nuttyartist/notes
+EdrawMax
